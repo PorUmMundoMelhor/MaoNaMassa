@@ -1,10 +1,33 @@
 package com.maonamassa.persistence.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-import org.hibernate.validator.constraints.Email;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Email;
 
-public class Professor {
+@Entity
+public class Professor extends AbstractEntity {
     @NotEmpty(message = "The field name cannot e empty")
     private String name;
+    @Email(message = "This email is not valid")
+    @NotEmpty(message = "The field email cannot be empty")
+    @Column(unique = true)
+    private String email;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }

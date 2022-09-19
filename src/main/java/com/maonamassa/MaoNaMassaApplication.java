@@ -7,5 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MaoNaMassaApplication {
     public static void main(String[] args) {
         SpringApplication.run(MaoNaMassaApplication.class, args);
+
+
+
     }
 }
