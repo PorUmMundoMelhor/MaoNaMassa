@@ -64,6 +64,11 @@
             <artifactId>hibernate-validator</artifactId>
             <version>7.0.0.Final</version>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-extensions</artifactId>
+            <version>0.11.5</version>
+        </dependency>
     </dependencies>
 
     <build>
